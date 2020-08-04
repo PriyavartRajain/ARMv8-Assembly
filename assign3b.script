@@ -1,0 +1,255 @@
+Script started on 2020-05-28 18:25:02-06:00
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ exitgdb assign3acc assign3a.s -o assign3a -g3b.s -o assign3b[C[C[C[C[20P./assign3am4 assign3a.asm>assign3a.s[1P.sb.s[1P.asm>assign3b.sb.asm>assign3b.s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ m4 assign3b.asm>assign3b.sexit[Kgdb assign3acc assign3a.s -o assign3a -g3[K[K[K[K[Kb[1P[1@b
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gcc assign3b.s -o assign3bm4 assign3b.asm>assign3b.sexit[Kgdb assign3acc assign3a.s -o assign3a -g3b.s -o assign3b[C[C[C[C[20P./assign3a[Kb
+
+Enter a number in decimal system:	89
+
+Output:    89
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign3b
+
+Enter a number in decimal system:	-12
+
+Output:    -12
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign3bgcc assign3b.s -o assign3bm4 assign3b.asm>assign3b.s
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ m4 assign3b.asm>assign3b.s[16P./assign3bgcc assign3b.s -o assign3b -g3
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gdb assign3b
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3b...done.
+(gdb) b test
+Breakpoint 1 at 0x400684: file assign3b.s, line 61.
+(gdb) r
+Starting program: /home/uga/priyavart.rajain1/CPSC_355_Spring/assign3b 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Enter a number in decimal system:	12  16
+
+Breakpoint 1, test () at assign3b.s:61
+61	test:		cmp	x21, xzr					// compare x21 to xzr
+(gdb) displat [K[Ky $x19
+1: $x19 = 16
+(gdb) display $x19[K[K20
+2: $x20 = 0
+(gdb) display $x20[K[K[K[K[K[K[K[K[K[K[K[Kp/t $x19
+$1 = 10000
+(gdb) p/t $x19[K[K20
+$2 = 0
+(gdb) ni
+62			b.ne	body						// if x21!=0 branch to body
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+body () at assign3b.s:65
+65	body:		and	x22, x21, 0x1			// getting the last bit of x21 when performed and with 0x1
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+66			udiv	x21, x21, x24				// x21 = x21/2
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+68			lsl	x22, x22, x23				// x22 = x22 << x23
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+70			orr	x20, x20, x22			// x20 = x20 | x22
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+72			add	x23, x23, 0x1					// x23++
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+74			b	test						// branch to loop test
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+
+Breakpoint 1, test () at assign3b.s:61
+61	test:		cmp	x21, xzr					// compare x21 to xzr
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+62			b.ne	body						// if x21!=0 branch to body
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+body () at assign3b.s:65
+65	body:		and	x22, x21, 0x1			// getting the last bit of x21 when performed and with 0x1
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+66			udiv	x21, x21, x24				// x21 = x21/2
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+68			lsl	x22, x22, x23				// x22 = x22 << x23
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+70			orr	x20, x20, x22			// x20 = x20 | x22
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+72			add	x23, x23, 0x1					// x23++
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+74			b	test						// branch to loop test
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+
+Breakpoint 1, test () at assign3b.s:61
+61	test:		cmp	x21, xzr					// compare x21 to xzr
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+62			b.ne	body						// if x21!=0 branch to body
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+body () at assign3b.s:65
+65	body:		and	x22, x21, 0x1			// getting the last bit of x21 when performed and with 0x1
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+66			udiv	x21, x21, x24				// x21 = x21/2
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+68			lsl	x22, x22, x23				// x22 = x22 << x23
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+70			orr	x20, x20, x22			// x20 = x20 | x22
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+72			add	x23, x23, 0x1					// x23++
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+74			b	test						// branch to loop test
+1: $x19 = 16
+2: $x20 = 0
+(gdb) ni
+
+Breakpoint 1, test () at assign3b.s:61
+61	test:		cmp	x21, xzr					// compare x21 to xzr
+1: $x19 = 16
+2: $x20 = 0
+(gdb) nip/t $x2019[C[C[C[C[C[Cdisplay $x2019[C[C[C[C[C[Cr[Kb testr[Kdisplay $x1920[C[C[C[C[C[C[4Pp/t $x192019
+$3 = 10000
+(gdb) p/t $x19[K[K20
+$4 = 0
+(gdb) p/t $x2019[C[C[C[C[C[Cni[K[K[Kquit
+A debugging session is active.
+
+	Inferior 1 [process 17314] will be killed.
+
+Quit anyway? (y or n) y
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gdb assign3b,[K.asm[K[K[K[K
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3b...done.
+(gdb) b test
+Breakpoint 1 at 0x400684: file assign3b.s, line 61.
+(gdb) r
+Starting program: /home/uga/priyavart.rajain1/CPSC_355_Spring/assign3b 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Enter a number in decimal system:	-15
+
+Breakpoint 1, test () at assign3b.s:61
+61	test:		cmp	x21, xzr					// compare x21 to xzr
+(gdb) display $x19
+1: $x19 = 15
+(gdb) display $x19[K[K20
+2: $x20 = 0
+(gdb) display $x2019[C[C[C[C[C[Cr[Kb test[K[K[K[K[K[Kp/t $x19
+$1 = 1111
+(gdb) p/t $x19[K[K20
+$2 = 0
+(gdb) p/t $x2019[C[C[C[C[C[Cdisplay $x2019[K[K[K[K[K[K[K[K[K[K[K[Kni
+62			b.ne	body						// if x21!=0 branch to body
+1: $x19 = 15
+2: $x20 = 0
+(gdb) ni
+body () at assign3b.s:65
+65	body:		and	x22, x21, 0x1			// getting the last bit of x21 when performed and with 0x1
+1: $x19 = 15
+2: $x20 = 0
+(gdb) ni
+66			udiv	x21, x21, x24				// x21 = x21/2
+1: $x19 = 15
+2: $x20 = 0
+(gdb) ni
+68			lsl	x22, x22, x23				// x22 = x22 << x23
+1: $x19 = 15
+2: $x20 = 0
+(gdb) ni
+70			orr	x20, x20, x22			// x20 = x20 | x22
+1: $x19 = 15
+2: $x20 = 0
+(gdb) ni
+72			add	x23, x23, 0x1					// x23++
+1: $x19 = 15
+2: $x20 = 1
+(gdb) ni
+74			b	test						// branch to loop test
+1: $x19 = 15
+2: $x20 = 1
+(gdb) ni
+
+Breakpoint 1, test () at assign3b.s:61
+61	test:		cmp	x21, xzr					// compare x21 to xzr
+1: $x19 = 15
+2: $x20 = 1
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 17356] will be killed.
+
+Quit anyway? (y or n) y
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ exit
+exit
+
+Script done on 2020-05-28 18:30:52-06:00

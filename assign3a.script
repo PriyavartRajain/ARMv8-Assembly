@@ -1,0 +1,108 @@
+Script started on 2020-05-28 18:16:38-06:00
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign3bgcc assign3b.s -o assign3b [1Pm4 assign3b.asm>assign3b.s[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Km4 assign3a.s[K[K[K[K[K[K[K[K[K[K[K[K[K./assign3agcc assign3a.s -o assign3a [1Pm4 assign3a.asm>assign3a.s
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ m4 assign3a.asm>assign3a.s[16P./assign3bgcc assign3b.s -o assign3b [K./assign3agcc assign3a.s -o assign3a 
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gcc assign3a.s -o assign3a [1Pm4 assign3a.asm>assign3a.s[16P./assign3bgcc assign3b.s -o assign3b [17P./assign3b[Ka
+
+Enter an integer:    -3
+Output:   -3
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign3agcc assign3a.s -o assign3a -g3[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Km4 assign3a.asm>assign3a.s[16P./assign3bgcc assign3b.s -o assign3b [Kgcc assign3b.s -o assign3b [17P./assign3b[Ka
+
+Enter an integer:    7
+Output:   7
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign3a[Km4 assign3a.asm>assign3a.s[16P./assign3bgcc assign3b.s -o assign3b -g3
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gdb ass[K[K[K[K[K[K[Kgcc assign3b.s -o assign3b -g3[1P -g3a -g3[1P[1@a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gdb assign3a
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3a...done.
+(gdb) b test
+Breakpoint 1 at 0x400674: file assign3a.s, line 63.
+(gdb) r
+Starting program: /home/uga/priyavart.rajain1/CPSC_355_Spring/assign3a 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Enter an integer:    23
+
+Breakpoint 1, test () at assign3a.s:63
+63	test:		cmp	x21, x26				// check if x21<64
+(gdb) r[Kni[K[Kp/t $x21[K[K[K[K[K[K[K[Kni[K[Kp/t d[K$x20
+$1 = 0
+(gdb) p/t $x20[K[K19
+$2 = 10111
+(gdb) p/t $x1920[C[C[C[C[C[Cr[Kb test[K[K[K[K[K[Kni
+64			b.lt	body				// if true, branch to body of loop
+(gdb) ni
+body () at assign3a.s:67
+67	body:		tst	x19, 0x1			// bitwise and the 0th bit of x19 with 0x1 x21.e if x19 = 0x1
+(gdb) ni
+68			b.eq	bitclear			// tst sets the zero flag to 0 if the result of AND is 0, so b.eq checks if Z==0, if true we branch to bitclear
+(gdb) ni
+69			b	bitset				// else, Z!=0 ,x21.e AND is true we branch to bitset to calculate the x20
+(gdb) ni
+bitset () at assign3a.s:71
+71	bitset:		mov	x23,0x1			// Calculating 2^n: to find x20, we first need 2^x21 or x23 
+(gdb) ni
+72			mov	x22,0				// setting loop counter for the for loop to 0
+(gdb) ni
+73			b	powTest				// branch to loop test
+(gdb) ni
+powTest () at assign3a.s:75
+75	powTest:	cmp	x22,x21				// if x22<x21	//Note here x21 = n x21.e iteration number of outer loop
+(gdb) ni
+76			b.lt	calcPower			// if x22<x21 , branch to calcPower to find x23
+(gdb) ni
+77			b.ge	calcDec				// else branch to calcDec to add x23 to Decimal_N
+(gdb) ni
+calcDec () at assign3a.s:83
+83	calcDec:	add	x20, x20, x23	// Decimal_N = Decimal_N + 2^x21
+(gdb) ni
+84			b	bitclear			// branch to bitclear to right shift x19
+(gdb) ni
+bitclear () at assign3a.s:86
+86	bitclear:	lsr	x19, x19, 0x1		// x19 >> 0x1
+(gdb) ni
+87			add	x21, x21, 1				// increment outer loop counter 		
+(gdb) ni
+88			b	test				// branch to outer loop test
+(gdb) p/t $x20
+$3 = 1
+(gdb) p/t $x20[K[K19
+$4 = 1011
+(gdb) display [K[K[K[K[K[K[K[Kni
+
+Breakpoint 1, test () at assign3a.s:63
+63	test:		cmp	x21, x26				// check if x21<64
+(gdb) display $x[K[K$x20
+1: $x20 = 1
+(gdb) display $x20[K[K[K19
+2: $19 = <error: History has not yet reached $19.>
+(gdb) display $19x19[C[C
+3: $x19 = 11
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 17009] will be killed.
+
+Quit anyway? (y or n) y
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ exit [K
+exit
+
+Script done on 2020-05-28 18:24:45-06:00

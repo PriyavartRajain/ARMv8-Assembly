@@ -1,0 +1,156 @@
+Script started on 2020-06-06 23:55:03-06:00
+]0;priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01$ vim assign4test.asm[6P./assign4testgcc assign4test.s -o assign4testm4 assign4test.asm > assign4test.s[1P.s[1P.s[1P.s[1P.s[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01$ m4 assign4.asm > assign4.s[7Pvim assign4test.asm[6P./assign4testgcc assign4test.s -o assign4test[K[K[K[K[C[C[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01$ ./assign4
+Enter the value of N:	6
+10   47   26   88   84   89   
+44   58   85   57   82   83   
+13   78   22   33   56   97   
+62   52   77   22   20   74   
+94   63   25   19   99   68   
+28   9   68   54   97   52   
+
+Row stats:
+Sum of row 0: 344
+Min of row 0: 10
+Max of row 0: 89
+
+Row stats:
+Sum of row 1: 409
+Min of row 1: 44
+Max of row 1: 85
+
+Row stats:
+Sum of row 2: 299
+Min of row 2: 13
+Max of row 2: 97
+
+Row stats:
+Sum of row 3: 307
+Min of row 3: 20
+Max of row 3: 77
+
+Row stats:
+Sum of row 4: 368
+Min of row 4: 19
+Max of row 4: 99
+
+Row stats:
+Sum of row 5: 308
+Min of row 5: 9
+Max of row 5: 97
+
+Column stats:
+Sum of column 0: 251
+Min of column 0: 10
+Max of column 0: 94
+
+Column stats:
+Sum of column 1: 307
+Min of column 1: 9
+Max of column 1: 78
+
+Column stats:
+Sum of column 2: 303
+Min of column 2: 22
+Max of column 2: 85
+
+Column stats:
+Sum of column 3: 273
+Min of column 3: 19
+Max of column 3: 88
+
+Column stats:
+Sum of column 4: 438
+Min of column 4: 20
+Max of column 4: 99
+
+Column stats:
+Sum of column 5: 463
+Min of column 5: 52
+Max of column 5: 97
+]0;priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01$ ./assign4
+Enter the value of N:	3
+19   22   75   
+2   83   88   
+91   53   12   
+
+Row stats:
+Sum of row 0: 116
+Min of row 0: 19
+Max of row 0: 75
+
+Row stats:
+Sum of row 1: 173
+Min of row 1: 2
+Max of row 1: 88
+
+Row stats:
+Sum of row 2: 156
+Min of row 2: 12
+Max of row 2: 91
+
+Column stats:
+Sum of column 0: 112
+Min of column 0: 2
+Max of column 0: 91
+
+Column stats:
+Sum of column 1: 158
+Min of column 1: 22
+Max of column 1: 83
+
+Column stats:
+Sum of column 2: 175
+Min of column 2: 12
+Max of column 2: 88
+]0;priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01$ ./assign4
+Enter the value of N:	4
+51   25   56   42   
+27   91   15   30   
+56   62   68   8   
+55   85   45   83   
+
+Row stats:
+Sum of row 0: 174
+Min of row 0: 25
+Max of row 0: 56
+
+Row stats:
+Sum of row 1: 163
+Min of row 1: 15
+Max of row 1: 91
+
+Row stats:
+Sum of row 2: 194
+Min of row 2: 8
+Max of row 2: 68
+
+Row stats:
+Sum of row 3: 268
+Min of row 3: 45
+Max of row 3: 85
+
+Column stats:
+Sum of column 0: 189
+Min of column 0: 27
+Max of column 0: 56
+
+Column stats:
+Sum of column 1: 263
+Min of column 1: 25
+Max of column 1: 91
+
+Column stats:
+Sum of column 2: 184
+Min of column 2: 15
+Max of column 2: 68
+
+Column stats:
+Sum of column 3: 163
+Min of column 3: 8
+Max of column 3: 83
+]0;priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01priyavart.rajain1@csa2:~/CPSC_355_Spring/Tutorial01$ exit
+exit
+
+Script done on 2020-06-06 23:55:42-06:00

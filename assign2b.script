@@ -1,0 +1,38 @@
+Script started on 2020-05-22 18:24:20-06:00
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ m4 assign2b.asm > assign2b.s
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gcc assign2b.s -o assign2b
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign2b
+
+Enter the value of n:	5
+Current integer is: 191
+Current integer is: 87
+Current integer is: 106
+Current integer is: 72
+Current integer is: 61
+
+Min: 61
+Max: 191
+Sum: 517
+
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign2b
+
+Enter the value of n:	10
+Current integer is: 73
+Current integer is: 125
+Current integer is: 98
+Current integer is: 47
+Current integer is: 187
+Current integer is: 203
+Current integer is: 134
+Current integer is: 185
+Current integer is: 68
+Current integer is: 202
+
+Min: 47
+Max: 203
+Sum: 1322
+
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ exit
+exit
+
+Script done on 2020-05-22 18:26:06-06:00

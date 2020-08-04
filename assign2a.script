@@ -1,0 +1,36 @@
+Script started on 2020-05-22 18:19:53-06:00
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gcc sc[K[Kassign2a.s -o assign2a
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign2a
+
+Enter the value of n:	4
+Current integer is: 3
+Current integer is: 61
+Current integer is: 4
+Current integer is: 199
+
+Min: 3
+Max: 199
+Sum: 267
+
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign2a
+
+Enter the value of n:	10
+Current integer is: 180
+Current integer is: 120
+Current integer is: 178
+Current integer is: 220
+Current integer is: 169
+Current integer is: 27
+Current integer is: 78
+Current integer is: 244
+Current integer is: 74
+Current integer is: 240
+
+Min: 27
+Max: 244
+Sum: 1530
+
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ exit
+exit
+
+Script done on 2020-05-22 18:21:05-06:00
