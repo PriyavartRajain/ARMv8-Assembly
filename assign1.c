@@ -1,7 +1,7 @@
 													/*ASSIGNMENT 1*/
 
 /* Submitted by : Priyavart Rajain
- * UCID: 30074184 */
+CPSC 355 University of Calgary*/
 
 #include<stdio.h>
 #include<stdlib.h>
