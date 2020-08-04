@@ -1,0 +1,251 @@
+Script started on 2020-05-15 20:17:55-06:00
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ script assign1.script[8Pvim assign1.crm assign1.script[6P./assign1 5gcc assign1.c -o assign1
+[01m[Kassign1.c:[m[K In function ‘[01m[Kinitialize[m[K’:
+[01m[Kassign1.c:13:11:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Ktime[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+     srand([01;35m[Ktime[m[K(0));                           // Uses current time as seed for the generation of random numbers.
+           [01;35m[K^~~~[m[K
+[01m[Kassign1.c:16:30:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[KrandomNum[m[K’; did you mean ‘[01m[Krandom_r[m[K’? [[01;35m[K-Wimplicit-function-declaration[m[K]
+             *(table+i*N+j) = [01;35m[KrandomNum[m[K(0,9,N);   // table points to the [0][0] element of the 2D array. Adding i*N to it points to the 0th element of i'th row, and adding j to it pointts to table[i][j],
+                              [01;35m[K^~~~~~~~~[m[K
+                              [32m[Krandom_r[m[K
+[01m[Kassign1.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kassign1.c:118:11:[m[K [01;35m[Kwarning: [m[Kassignment to ‘[01m[Kint (*)[(sizetype)(N)][m[K’ from incompatible pointer type ‘[01m[Kint *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     table [01;35m[K=[m[K initialize((int*)table,N);          // calling the initialize function, which takes in the pointer to our table and dimensions as an argument, pointer table now points to the table returned by initialize function.
+           [01;35m[K^[m[K
+[01m[Kassign1.c:136:15:[m[K [01;35m[Kwarning: [m[Kassignment to ‘[01m[Kint (*)[(sizetype)(N)][m[K’ from incompatible pointer type ‘[01m[Kint *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+         table [01;35m[K=[m[K sort((int*)table,c_num,N);    // Call the sort function to sort the table by the designated column number, c_num.
+               [01;35m[K^[m[K
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ gcc assign1.c -o assign1[3Pscript assign1.script[8Pvim assign1.crm assign1.script[6P./assign1 5
+
+The initial table:
+ 1  2  4  6  6 
+ 8  2  0  3  9 
+ 6  3  3  1  1 
+ 6  5  3  9  9 
+ 2  5  1  6  0 
+
+
+Enter a column number: 0
+
+Table sorted by column 0:
+ 1  2  4  6  6 
+ 2  2  0  3  9 
+ 6  3  3  1  1 
+ 6  5  3  9  9 
+ 8  5  1  6  0 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 2
+
+Table sorted by column 2:
+ 1  2  0  6  6 
+ 2  2  1  3  9 
+ 6  3  3  1  1 
+ 6  5  3  9  9 
+ 8  5  4  6  0 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 1
+
+Table sorted by column 1:
+ 1  2  0  6  6 
+ 2  2  1  3  9 
+ 6  3  3  1  1 
+ 6  5  3  9  9 
+ 8  5  4  6  0 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 3
+
+Table sorted by column 3:
+ 1  2  0  1  6 
+ 2  2  1  3  9 
+ 6  3  3  6  1 
+ 6  5  3  6  9 
+ 8  5  4  9  0 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 4
+
+Table sorted by column 4:
+ 1  2  0  1  0 
+ 2  2  1  3  1 
+ 6  3  3  6  6 
+ 6  5  3  6  9 
+ 8  5  4  9  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: q
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ ./assign1 5gcc assign1.c -o assign1[13P./assign1 5[K8
+
+The initial table:
+ 1  5  3  1  9  0  6  1 
+ 2  5  9  3  9  5  2  3 
+ 8  1  8  5  9  1  2  8 
+ 5  8  5  7  5  9  4  5 
+ 1  1  9  0  7  0  8  3 
+ 0  4  2  3  6  7  5  1 
+ 2  6  6  0  3  7  6  9 
+ 7  7  7  8  5  4  5  9 
+
+
+Enter a column number: 0
+
+Table sorted by column 0:
+ 0  5  3  1  9  0  6  1 
+ 1  5  9  3  9  5  2  3 
+ 1  1  8  5  9  1  2  8 
+ 2  8  5  7  5  9  4  5 
+ 2  1  9  0  7  0  8  3 
+ 5  4  2  3  6  7  5  1 
+ 7  6  6  0  3  7  6  9 
+ 8  7  7  8  5  4  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 1
+
+Table sorted by column 1:
+ 0  1  3  1  9  0  6  1 
+ 1  1  9  3  9  5  2  3 
+ 1  4  8  5  9  1  2  8 
+ 2  5  5  7  5  9  4  5 
+ 2  5  9  0  7  0  8  3 
+ 5  6  2  3  6  7  5  1 
+ 7  7  6  0  3  7  6  9 
+ 8  8  7  8  5  4  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 3
+
+Table sorted by column 3:
+ 0  1  3  0  9  0  6  1 
+ 1  1  9  0  9  5  2  3 
+ 1  4  8  1  9  1  2  8 
+ 2  5  5  3  5  9  4  5 
+ 2  5  9  3  7  0  8  3 
+ 5  6  2  5  6  7  5  1 
+ 7  7  6  7  3  7  6  9 
+ 8  8  7  8  5  4  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 2 2
+
+Table sorted by column 2:
+ 0  1  2  0  9  0  6  1 
+ 1  1  3  0  9  5  2  3 
+ 1  4  5  1  9  1  2  8 
+ 2  5  6  3  5  9  4  5 
+ 2  5  7  3  7  0  8  3 
+ 5  6  8  5  6  7  5  1 
+ 7  7  9  7  3  7  6  9 
+ 8  8  9  8  5  4  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 3
+
+Table sorted by column 3:
+ 0  1  2  0  9  0  6  1 
+ 1  1  3  0  9  5  2  3 
+ 1  4  5  1  9  1  2  8 
+ 2  5  6  3  5  9  4  5 
+ 2  5  7  3  7  0  8  3 
+ 5  6  8  5  6  7  5  1 
+ 7  7  9  7  3  7  6  9 
+ 8  8  9  8  5  4  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 4
+
+Table sorted by column 4:
+ 0  1  2  0  3  0  6  1 
+ 1  1  3  0  5  5  2  3 
+ 1  4  5  1  5  1  2  8 
+ 2  5  6  3  6  9  4  5 
+ 2  5  7  3  7  0  8  3 
+ 5  6  8  5  9  7  5  1 
+ 7  7  9  7  9  7  6  9 
+ 8  8  9  8  9  4  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 5
+
+Table sorted by column 5:
+ 0  1  2  0  3  0  6  1 
+ 1  1  3  0  5  0  2  3 
+ 1  4  5  1  5  1  2  8 
+ 2  5  6  3  6  4  4  5 
+ 2  5  7  3  7  5  8  3 
+ 5  6  8  5  9  7  5  1 
+ 7  7  9  7  9  7  6  9 
+ 8  8  9  8  9  9  5  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 6
+
+Table sorted by column 6:
+ 0  1  2  0  3  0  2  1 
+ 1  1  3  0  5  0  2  3 
+ 1  4  5  1  5  1  4  8 
+ 2  5  6  3  6  4  5  5 
+ 2  5  7  3  7  5  5  3 
+ 5  6  8  5  9  7  6  1 
+ 7  7  9  7  9  7  6  9 
+ 8  8  9  8  9  9  8  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: r
+
+Enter a column number: 7
+
+Table sorted by column 7:
+ 0  1  2  0  3  0  2  1 
+ 1  1  3  0  5  0  2  1 
+ 1  4  5  1  5  1  4  3 
+ 2  5  6  3  6  4  5  3 
+ 2  5  7  3  7  5  5  5 
+ 5  6  8  5  9  7  6  8 
+ 7  7  9  7  9  7  6  9 
+ 8  8  9  8  9  9  8  9 
+
+Press q and hit enter to quit the program now!
+Press any other key and hit enter to continue sorting.
+Your response: q
+]0;priyavart.rajain1@csa2:~/CPSC_355_Springpriyavart.rajain1@csa2:~/CPSC_355_Spring$ exit
+exit
+
+Script done on 2020-05-15 20:22:48-06:00
