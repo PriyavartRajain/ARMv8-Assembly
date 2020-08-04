@@ -1,7 +1,7 @@
 //Priyavart Rajain
-// CPSC 355 Spring 
+// CPSC 355 Spring 2020
 // University of Calgary
-// 30074184
+
 		.data										// write only part of the code
 userinput:	.word 0										// stores user input
 response:	.word 0										// stores user response to quit or continue
