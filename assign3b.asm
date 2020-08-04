@@ -1,5 +1,5 @@
 /* Submitted by: Priyavart Rajian
-UCID:		 30074184
+University of Calgary
 Course:		 CPSC 355 Spring 2020*/
 
 /* Assignment 3 : assign3b */
