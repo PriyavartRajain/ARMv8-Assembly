@@ -1,5 +1,5 @@
 // Priyavart Rajain
-// 30074184
+// University of Calgary
 // CPSC 355 . Assg. 4
 		
 		.data							// The write part of the program
