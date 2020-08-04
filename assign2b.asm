@@ -1,6 +1,6 @@
 /*Submitted by: Priyavart Rajain
-UCID:		30074184
 Course:		CPSC 355 Spring 2020
+University of Calgary
 */
 
 /* Defining the macros for registers */ 
